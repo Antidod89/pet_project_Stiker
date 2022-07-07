@@ -11,12 +11,14 @@ interface IMainLayout {
 const PageLayout: FC<IMainLayout> = ({ children }) => {
   return (
     <div className={style.page_wrapper}>
-      <Header />
-      <div className={style.content_wrapper}>
-        <Sidebar />
-        {children}
+      <div className={style.container}>
+        <Header />
+        <div className={style.content_wrapper}>
+          <Sidebar />
+          {children}
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
